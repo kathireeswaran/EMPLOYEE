@@ -6,4 +6,6 @@ public interface EmployeeService {
 
 	boolean validateFields(String username, String password) throws EMSException;
 
+	boolean getvaldate(String firstname);
+
 }

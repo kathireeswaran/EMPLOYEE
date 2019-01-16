@@ -19,6 +19,7 @@ public class Ui_Interface {
 		LocalDate date = null;
 		LocalDate joindate=null;
 		boolean flag = false;
+		boolean vflag=false;
 		EmployeeService service=null;
 		do {
 			System.out.println("Enter Username");
@@ -43,8 +44,13 @@ public class Ui_Interface {
 						scanner.nextLine();
 						switch (choice) {
 						case 1:
+							String firstname=null;
+							do {
 							System.out.println("Enter Your First Name");
-							String firstname = scanner.nextLine();
+							firstname = scanner.nextLine();
+							boolean valflag=service.getvaldate(firstname);
+							valflag=vflag;
+							}while(!vflag);
 							System.out.println("Enter Your Last Name");
 							String lastname = scanner.nextLine();
 							String dob = null;
